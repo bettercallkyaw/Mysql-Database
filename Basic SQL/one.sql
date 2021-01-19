@@ -1,0 +1,22 @@
+CREATE DATABASE DogApp;
+
+SHOW DATABASES;
+
+DROP DATABASE DogApp;
+
+USE DogApp;
+
+SELECT DATABASE();
+
+CREATE TABLE dogs(
+    name VARCHAR(55),
+    age INT 
+);
+
+SHOW TABLES;
+
+SHOW COLUMNS FROM dogs;
+
+DESC dogs;
+
+DROP TABLE dogs;

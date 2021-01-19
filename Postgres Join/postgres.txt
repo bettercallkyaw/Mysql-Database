@@ -1,0 +1,11 @@
+\l=>show databases
+
+\c database_name =>use database
+
+\dt =>show tables
+
+\dt+=>show more information tables
+
+\d table name=>describe table
+
+
