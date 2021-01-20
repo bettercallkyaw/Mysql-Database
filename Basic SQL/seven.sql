@@ -9,26 +9,26 @@ ORDER BY released_year;
 
 SELECT title,stock_quantity FROM books WHERE stock_quantity>=100;
 
-SELECT 99>1;
+SELECT 99>1; --1
 
-SELECT 1>2;
+SELECT 1>2;  --0
 
-SELECT 'a'>'b';
+SELECT 'a'>'b'; --0
 
-SELECT 'A'>'a';
+SELECT 'A'>'a'; --0
 
-SELECT 'A'>='a';
+SELECT 'A'>='a'; --1
 
-SELECT 'h'<'p';
+SELECT 'h'<'p'; --1
 
-SELECT 'Q'<='q';
+SELECT 'Q'<='q';--1
 
 SELECT title,released_year,author_lname 
 FROM books WHERE author_lname='Eggers' AND released_year>2010;
 
-SELECT 1<5 && 3=5;
+SELECT 1<5 && 3=5; --0
 
-SELECT 54<=54 AND 'a'='A';
+SELECT 54<=54 AND 'a'='A'; --1
 
 SELECT * FROM books WHERE author_lname='Eggers'
 AND released_year>2010 AND title LIKE '%novel%';
@@ -36,9 +36,9 @@ AND released_year>2010 AND title LIKE '%novel%';
 SELECT title,author_lname,released_year FROM books WHERE 
 author_lname='Eggers'||released_year>2010;
 
-SELECT 2>1 || 2<1;
+SELECT 2>1 || 2<1; --1
 
-SELECT 1>2 OR 2<1;
+SELECT 1>2 OR 2<1;  --0
 
 SELECT title,author_lname,released_year,stock_quantity
 FROM books WHERE author_lname='Eggers'||released_year>2010
