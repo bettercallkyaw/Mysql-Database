@@ -38,9 +38,25 @@ SELECT id As employees_id,current_status As their_condention FROM employees;
 UPDATE employees SET city='yangon' WHERE first_name='kyaw';
 DELETE FROM employees WHERE city='yangon';
 
-CREATE TABLE students(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    subject VARCHAR(44) NOT NULL,
-    teacher VARCHAR(44) NOT NULL DEFAULT 'udemy teacher',
-    age INT NOT NULL
+CREATE TABLE instructors(
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    middle_name VARCHAR(100),
+    last_name VARCHAR(100) NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    total_couse INT,
+    age INT,
+    address VARCHAR(50),
+    email_address VARCHAR(50),
+    social_links VARCHAR(200),
+    category VARCHAR(100),
+    enrolled_course INT,
+    PRIMARY KEY(id)
 );
+
+INSERT INTO instructors(first_name,last_name,full_name,
+total_couse,age,address,email_address,social_links,
+category,enrolled_course) VALUES
+('Angela','Yu','Angela Yu',10,30,'london Ma','angela@gmail.com','www.twitter.com/@angelayu22','web developement',3456),
+('Brad','Traversy','Brad Traversy',13,32,'Boston NA','brad@gmail.com','www.twitter.com/@brad','node js',28282),
+('Max','Schx','Max Schx',15,33,'New Your AK','nax@gmail.com','www.twitter.com/@max','database',262892);
